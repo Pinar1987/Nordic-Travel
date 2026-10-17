@@ -35,6 +35,13 @@
     <h2>Popular Destinations</h2>
     <p>Find your next Nordic adventure.</p>
 
+    <input
+    type="search"
+    id="searchInput"
+    placeholder="Search destinations..."
+    aria-label="Search destinations"
+      >
+
     <div class="destination-grid">
         <article class="destination-card">
             <img src="images/norway.jpg" alt="Norwegian fjord landscape">
@@ -60,9 +67,14 @@
         <p>Experience the northern lights and Finnish nature.</p>
     </article>
     </div>
+   
+    <p id="noResults" hidden>
+    No destinations found. Try another country.
+</p>
+
 </section>
 </main>
 
-
+<script src="script.js"></script>
 </body>
 </html>

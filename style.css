@@ -138,3 +138,18 @@ header {
     transform: translateY(-8px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
+
+#searchInput {
+    width: 100%;
+    max-width: 400px;
+    padding: 14px 18px;
+    margin-top: 25px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+#searchInput:focus {
+    outline: 2px solid #38bdf8;
+    border-color: #38bdf8;
+}
