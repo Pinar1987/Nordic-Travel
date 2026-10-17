@@ -5,6 +5,16 @@ const destinationCards = document.querySelectorAll(".destination-card");
 
 const noResults = document.querySelector("#noResults");
 
+const contactForm = document.querySelector("#contactForm");
+const formSuccess = document.querySelector("#formSuccess");
+
+contactForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    formSuccess.hidden = false;
+    contactForm.reset();
+});
+
 searchInput.addEventListener("input", function () {
     const searchText = searchInput.value.trim().toLowerCase();
     let visibleCards = 0;
