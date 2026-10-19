@@ -343,3 +343,51 @@ header {
     line-height: 1.7;
     color: #475569;
 }
+
+/* WEATHER SECTION */
+
+.weather-section {
+    margin-top: 30px;
+    padding: 24px;
+    background-color: #f1f5f9;
+    border-radius: 12px;
+}
+
+.weather-section h2 {
+    color: #102a43;
+    margin-bottom: 12px;
+}
+
+#weatherInfo {
+    font-size: 18px;
+}
+/* BACK BUTTON */
+
+.back-button {
+    display: inline-block;
+    padding: 12px 22px;
+    background-color: #102a43;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #1d4e70;
+    transform: translateX(-4px);
+}
+
+.back-button:focus-visible {
+    outline: 3px solid #38bdf8;
+    outline-offset: 3px;
+}
+
+/* DESTINATION PAGE HEADER */
+
+.destination-detail header {
+    position: relative;
+    background-color: #102a43;
+}

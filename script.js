@@ -8,6 +8,10 @@ const noResults = document.querySelector("#noResults");
 const contactForm = document.querySelector("#contactForm");
 const formSuccess = document.querySelector("#formSuccess");
 
+const filterButtons = document.querySelectorAll(".filter-btn");
+
+let activeCategory = "all";
+
 contactForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
@@ -15,14 +19,18 @@ contactForm.addEventListener("submit", function (event) {
     contactForm.reset();
 });
 
-searchInput.addEventListener("input", function () {
+function filterDestinations() {
     const searchText = searchInput.value.trim().toLowerCase();
     let visibleCards = 0;
 
     destinationCards.forEach(function (card) {
         const countryName = card.querySelector("h3").textContent.toLowerCase();
+        const category = card.dataset.category;
 
-        if (countryName.includes(searchText)) {
+        const matchesSearch = countryName.includes(searchText);
+        const matchesCategory = activeCategory === "all" || category === activeCategory;
+
+        if (matchesSearch && matchesCategory) {
             card.style.display = "";
             visibleCards++;
         } else {
@@ -31,4 +39,20 @@ searchInput.addEventListener("input", function () {
     });
 
     noResults.hidden = visibleCards !== 0;
+}
+
+searchInput.addEventListener("input", filterDestinations);
+
+filterButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+        activeCategory = button.dataset.filter;
+
+        filterButtons.forEach(function (btn) {
+            btn.classList.remove("active");
+        });
+
+        button.classList.add("active");
+
+        filterDestinations();
+    });
 });
