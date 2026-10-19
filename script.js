@@ -16,7 +16,7 @@ contactForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
     formSuccess.hidden = false;
-    contactForm.reset();
+
 });
 
 function filterDestinations() {
@@ -49,9 +49,11 @@ filterButtons.forEach(function (button) {
 
         filterButtons.forEach(function (btn) {
             btn.classList.remove("active");
+            btn.setAttribute("aria-pressed", "false");
         });
 
         button.classList.add("active");
+        button.setAttribute("aria-pressed", "true");
 
         filterDestinations();
     });

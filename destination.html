@@ -20,22 +20,41 @@
     </nav>
 </header>
     <main class="details-page">
-       <a href="index.html#destinations" class="back-button">
-    ← Back to Destinations
-</a>
-
-        <h1 id="destinationTitle">Destination Details</h1>
-
-        <img id="destinationImage" src="" alt="">
-
-        <p id="destinationDescription"></p>
-        
-        <section class="weather-section">
-    <h2>Current Weather</h2>
-    <p id="weatherInfo">Loading weather...</p>
-</section>
-        
-</main>
+        <a href="index.html#destinations" class="back-button">← Back to Destinations</a>
+        <section class="destination-hero" aria-labelledby="destinationTitle">
+            <img id="destinationImage" alt="" fetchpriority="high">
+            <div class="hero-copy"><span class="eyebrow">YOUR NEXT NORDIC ADVENTURE</span>
+                <h1 id="destinationTitle">Destination Details</h1>
+                <p id="destinationDescription"></p>
+            </div>
+        </section>
+        <div id="destinationContent">
+            <div class="overview-grid">
+                <section class="about-section" aria-labelledby="aboutTitle">
+                    <span class="eyebrow">DISCOVER THE DESTINATION</span>
+                    <h2 id="aboutTitle">About</h2><p id="aboutDescription"></p>
+                    <dl id="countryFacts" class="country-facts"></dl>
+                </section>
+                <section class="weather-section" aria-labelledby="weatherTitle">
+                    <span class="eyebrow">A LITTLE HELP WITH PACKING</span>
+                    <h2 id="weatherTitle">Current Weather</h2>
+                    <p id="weatherLocation"></p>
+                    <div id="weatherInfo" role="status" aria-live="polite">Loading weather…</div>
+                    <button id="weatherRetry" type="button" hidden>Try again</button>
+                    <a class="weather-source" href="https://open-meteo.com/" target="_blank" rel="noopener">Weather data by Open-Meteo ↗</a>
+                </section>
+            </div>
+            <section class="places-section" aria-labelledby="placesTitle">
+                <span class="eyebrow">MAKE SOME MEMORIES</span><h2 id="placesTitle">Top Places to Visit</h2>
+                <div id="placesGrid" class="places-grid"></div>
+            </section>
+            <section class="tips-section" aria-labelledby="tipsTitle">
+                <span class="eyebrow">BEFORE YOU GO</span><h2 id="tipsTitle">Travel Tips</h2>
+                <div id="tipsGrid" class="tips-grid"></div>
+            </section>
+        </div>
+        <noscript><p>Enable JavaScript to see country details and current weather.</p></noscript>
+    </main>
 
 <footer class="footer">
     <p>© 2026 Nordic Travel. All rights reserved.</p>

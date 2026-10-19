@@ -3,128 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nordic Travel</title>
+    <meta name="description" content="Find your next Nordic adventure. Explore Norway, Sweden, Denmark and Finland with destination guides, travel tips and current weather.">
+    <title>Nordic Travel | Find your next adventure</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
-       
-        <nav class="navbar">
-    <a href="#home" class="logo">Nordic Travel</a>
-
-    <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#destinations">Destinations</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
-    </header>
-
-    <main>
-    <section id="home" class="hero">
-        <h1>Explore the Nordic World</h1>
-        <p>Discover breathtaking destinations across Scandinavia.</p>
-        <a href="#destinations" class="hero-btn">
-            Explore Destinations
-        </a>
+<body class="home-page">
+<a class="skip-link" href="#main">Skip to content</a>
+<header>
+    <nav class="navbar" aria-label="Main navigation">
+        <a href="#home" class="logo">Nordic Travel</a>
+        <ul class="nav-links">
+            <li><a href="#home" aria-current="page">Home</a></li>
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+<main id="main" class="home-main">
+    <section id="home" class="home-hero" aria-labelledby="homeTitle">
+        <img src="images/norway.jpg" alt="Coastal village and mountains in Norway" fetchpriority="high">
+        <div class="home-hero-copy">
+            <span class="eyebrow">FOUR COUNTRIES. COUNTLESS DISCOVERIES.</span>
+            <h1 id="homeTitle">A little north.<br>A world away.</h1>
+            <p>Fjords, colourful cities and quiet forest trails.<br class="desktop-break"> Find the Nordic escape that feels like you.</p>
+            <a href="#destinations" class="hero-btn">Explore Destinations <span aria-hidden="true">↗</span></a>
+        </div>
+        <span class="hero-location">Norway · A glimpse of the north</span>
     </section>
-    <section id="destinations" class="destinations">
-    <h2>Popular Destinations</h2>
-    <p>Find your next Nordic adventure.</p>
-
-    <input
-    type="search"
-    id="searchInput"
-    placeholder="Search destinations..."
-    aria-label="Search destinations"
-      >
-
-      <div class="filter-buttons">
-    <button type="button" class="filter-btn active" data-filter="all">
-        All
-    </button>
-
-    <button type="button" class="filter-btn" data-filter="nature">
-        Nature
-    </button>
-
-    <button type="button" class="filter-btn" data-filter="city">
-        City
-    </button>
-</div>
-
-    <div class="destination-grid">
-        <article class="destination-card" data-category="nature">
-            <img src="images/norway.jpg" alt="Norwegian fjord landscape">
-            <h3>Norway</h3>
-            <a href="destination.html?country=norway" class="details-link">
-    Explore Norway →
-</a>
-            <p>Explore beautiful fjords and mountains.</p>
-        </article>
-
-        <article class="destination-card"  data-category="city">
-             <img src="images/sweden.jpg" alt="Stockholm city in Sweden">
-            <h3>Sweden</h3>
-            <a href="destination.html?country=sweden" class="details-link">
-    Explore Sweden →
-</a>
-            <p>Discover charming cities and nature.</p>
-        </article>
-
-        <article class="destination-card"  data-category="city">
-                <img src="images/denmark.jpg" alt="Copenhagen in Denmark">
-            <h3>Denmark</h3>
-            <a href="destination.html?country=denmark" class="details-link">
-    Explore Denmark →
-</a>
-            <p>Experience Copenhagen and Danish culture.</p>
-        </article>
-
-        <article class="destination-card" data-category="nature">
-        <img src="images/finland.jpg" alt="Finnish winter landscape">
-        <h3>Finland</h3>
-        <a href="destination.html?country=finland" class="details-link">
-    Explore Finland →
-</a>
-        <p>Experience the northern lights and Finnish nature.</p>
-    </article>
+    <div class="home-intro" aria-label="Inside our guides">
+        <p>Go beyond the postcard.</p>
+        <span>Places worth exploring</span><span>Practical travel tips</span><span>Current capital weather</span>
     </div>
-   
-    <p id="noResults" hidden>
-    No destinations found. Try another country.
-</p>
-
-</section>
-
-<section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <p>Have a question? Send us a message!</p>
-
-    <form id="contactForm">
-        <label for="name">Your Name</label>
-        <input type="text" id="name" required>
-
-        <label for="email">Your Email</label>
-        <input type="email" id="email" required>
-
-        <label for="message">Your Message</label>
-        <textarea id="message" rows="5" required></textarea>
-
-        <button type="submit">Send Message</button>
-    </form>
-    
-    <p id="formSuccess" hidden>
-    Thank you! Your message has been received.
-</p>
-</section>
+    <section id="destinations" class="destinations" aria-labelledby="destinationsTitle">
+        <div class="section-heading"><div><span class="eyebrow">FIND YOUR NEXT ADVENTURE</span>
+            <h2 id="destinationsTitle">Where will you go?</h2>
+            <p>Four ways to fall in love with the north.</p></div>
+            <label class="search-box"><span>Search destinations</span><input type="search" id="searchInput" placeholder="Try Norway…" aria-label="Search destinations"></label>
+        </div>
+        <div class="filter-buttons" role="group" aria-label="Filter destinations">
+            <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">All destinations</button>
+            <button type="button" class="filter-btn" data-filter="nature" aria-pressed="false">Nature</button>
+            <button type="button" class="filter-btn" data-filter="city" aria-pressed="false">City</button>
+        </div>
+        <div class="destination-grid">
+            <article class="destination-card" data-category="nature">
+                <img src="images/norway.jpg" alt="Coastal village surrounded by Norwegian mountains" loading="lazy" width="600" height="440">
+                <div class="country-card-copy"><span class="eyebrow">FJORDS & MOUNTAINS</span><h3>Norway</h3>
+                    <p>Follow the fjords to coastal villages and unforgettable mountain views.</p><a href="destination.html?country=norway" class="details-link">Explore Norway <span aria-hidden="true">→</span></a>
+                </div>
+            </article>
+            <article class="destination-card" data-category="city">
+                <img src="images/sweden.jpg" alt="Snow-covered forest in Sweden" loading="lazy" width="600" height="440">
+                <div class="country-card-copy"><span class="eyebrow">ISLANDS & CITY LIFE</span><h3>Sweden</h3>
+                    <p>Discover island cities, cosy cafés and space to slow down.</p><a href="destination.html?country=sweden" class="details-link">Explore Sweden <span aria-hidden="true">→</span></a>
+                </div>
+            </article>
+            <article class="destination-card" data-category="city">
+                <img src="images/denmark.jpg" alt="Colourful waterfront buildings in Copenhagen" loading="lazy" width="600" height="440">
+                <div class="country-card-copy"><span class="eyebrow">COLOUR & COASTLINES</span><h3>Denmark</h3>
+                    <p>Wander harbour streets, explore design and enjoy life by the sea.</p><a href="destination.html?country=denmark" class="details-link">Explore Denmark <span aria-hidden="true">→</span></a>
+                </div>
+            </article>
+            <article class="destination-card" data-category="nature">
+                <img src="images/finland.jpg" alt="Northern lights above a snowy forest in Finland" loading="lazy" width="600" height="440">
+                <div class="country-card-copy"><span class="eyebrow">FORESTS & STILLNESS</span><h3>Finland</h3>
+                    <p>Find peaceful lakes, forest trails and the magic of the far north.</p><a href="destination.html?country=finland" class="details-link">Explore Finland <span aria-hidden="true">→</span></a>
+                </div>
+            </article>
+        </div>
+        <p id="noResults" role="status" hidden>No destinations found. Try another country or filter.</p>
+    </section>
+    <section class="travel-note" aria-labelledby="travelNoteTitle">
+        <div><span class="eyebrow">TAKE THE SCENIC ROUTE</span><h2 id="travelNoteTitle">Less rushing. More discovering.</h2></div>
+        <p>Start with a place that catches your eye. Our guides bring together highlights, practical tips and current weather to help you take the next step.</p>
+    </section>
+    <section id="contact" class="contact" aria-labelledby="contactTitle">
+        <div class="contact-copy"><span class="eyebrow">LET’S TALK TRAVEL</span><h2 id="contactTitle">Every adventure<br>starts with a question.</h2>
+            <p>Have a Nordic destination on your mind? Try the contact form below.</p>
+            <p class="form-note" id="contactNote">Demo form · Messages are not sent or saved.</p>
+        </div>
+        <div class="contact-panel">
+            <form id="contactForm" aria-describedby="contactNote">
+                <label for="name">Your name</label><input type="text" id="name" autocomplete="name" placeholder="Your name" required>
+                <label for="email">Your email</label><input type="email" id="email" autocomplete="email" placeholder="you@example.com" required>
+                <label for="message">Your message</label><textarea id="message" rows="4" placeholder="What would you like to explore?" required></textarea>
+                <button type="submit">Try demo form <span aria-hidden="true">→</span></button>
+            </form>
+            <p id="formSuccess" role="status" hidden>Demo complete. Your message has not been sent or saved.</p>
+        </div>
+    </section>
 </main>
 <footer class="footer">
     <p>© 2026 Nordic Travel. All rights reserved.</p>
     <p>Explore the beauty of Scandinavia.</p>
-     <p>Made by Pinar B.</p>
+    <p>Made by Pinar B.</p>
 </footer>
-
 <script src="script.js"></script>
 </body>
 </html>
