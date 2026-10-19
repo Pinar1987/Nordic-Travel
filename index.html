@@ -39,28 +39,54 @@
     aria-label="Search destinations"
       >
 
+      <div class="filter-buttons">
+    <button type="button" class="filter-btn active" data-filter="all">
+        All
+    </button>
+
+    <button type="button" class="filter-btn" data-filter="nature">
+        Nature
+    </button>
+
+    <button type="button" class="filter-btn" data-filter="city">
+        City
+    </button>
+</div>
+
     <div class="destination-grid">
-        <article class="destination-card">
+        <article class="destination-card" data-category="nature">
             <img src="images/norway.jpg" alt="Norwegian fjord landscape">
             <h3>Norway</h3>
+            <a href="destination.html?country=norway" class="details-link">
+    Explore Norway →
+</a>
             <p>Explore beautiful fjords and mountains.</p>
         </article>
 
-        <article class="destination-card">
+        <article class="destination-card"  data-category="city">
              <img src="images/sweden.jpg" alt="Stockholm city in Sweden">
             <h3>Sweden</h3>
+            <a href="destination.html?country=sweden" class="details-link">
+    Explore Sweden →
+</a>
             <p>Discover charming cities and nature.</p>
         </article>
 
-        <article class="destination-card">
+        <article class="destination-card"  data-category="city">
                 <img src="images/denmark.jpg" alt="Copenhagen in Denmark">
             <h3>Denmark</h3>
+            <a href="destination.html?country=denmark" class="details-link">
+    Explore Denmark →
+</a>
             <p>Experience Copenhagen and Danish culture.</p>
         </article>
 
-        <article class="destination-card">
+        <article class="destination-card" data-category="nature">
         <img src="images/finland.jpg" alt="Finnish winter landscape">
         <h3>Finland</h3>
+        <a href="destination.html?country=finland" class="details-link">
+    Explore Finland →
+</a>
         <p>Experience the northern lights and Finnish nature.</p>
     </article>
     </div>

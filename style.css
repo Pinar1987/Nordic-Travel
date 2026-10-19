@@ -274,3 +274,72 @@ header {
     font-size: 14px;
     margin: 8px 0;
 }
+
+/* DESTINATION FILTERS */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.filter-btn {
+    padding: 10px 22px;
+    border: 1px solid #cbd5e1;
+    border-radius: 30px;
+    background-color: white;
+    color: #102a43;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: #102a43;
+    color: white;
+    border-color: #102a43;
+}
+
+/* DESTINATION DETAILS LINKS */
+.details-link {
+    display: inline-block;
+    margin: 0 18px 18px;
+    color: #0077b6;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.details-link:hover {
+    text-decoration: underline;
+}
+
+/* DESTINATION DETAILS PAGE */
+
+.details-page {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 20px;
+}
+
+#destinationImage {
+    display: block;
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 25px 0;
+}
+
+.details-page h1 {
+    font-size: 36px;
+    color: #102a43;
+}
+
+.details-page p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #475569;
+}
